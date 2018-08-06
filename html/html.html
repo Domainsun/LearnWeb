@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--<meta http-equiv="refresh" content="5"> &lt;!&ndash;5s后跳转&ndash;&gt;-->
+    <!--<meta http-equiv="refresh" content="5 Url=http://www.baidu.com"  > &lt;!&ndash;3s后跳转至www.baidu.com&ndash;&gt;-->
+    <meta name="keywords" content="在这里 写一些内容，可以用来做seo优化"> <!--3s后跳转至www.baidu.com-->
+    <meta name="description" content="在这里 写一些网站描述内容"> <!--3s后跳转至www.baidu.com-->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+    <!--均使用 Windows Internet Explorer 7 的标准渲染模式 用来处理IE 兼容-->
+
+
+    <title>在这里设置网页标题</title>
+    <link rel="shortcut icon" href="image/icon_pycharm.png"> <!--标题上的图标-->
+
+
+    <style>
+
+        .c1{
+
+        }
+    </style>
+</head>
+<body>
+
+<!--&ngsp:空格  &lt:左箭头 &rt:右箭头 href 后面的为点击跳转链接-->
+<a href="www.baidu.com">hello &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; domain &lt;a&gt;</a>
+
+<!--段落标签 p-->
+<p>这是一个段落会内容会自动换行</p>
+<p>这是第二个段落会内容会自动换行</p>
+<p>段落里面用br换行 <br>内容会自动换行</p>
+
+
+<h1>H1 标签</h1>
+<h2>H2 标签</h2>
+<h3>H3 标签</h3>
+<h4>H4 标签</h4>
+<h5>H5 标签</h5>
+<h6>H6 标签</h6>
+
+<span>这是span 标签1  </span>
+<span>这是span 标签2 </span>
+<span>这是span 标签3   </span>
+
+
+<!--总结：
+        所有标签分为行内标签和块标签两种
+        span为行内标签 本身内容占多少就是多少 ,一行内堆叠
+        p 和 h1 为块标签，各占一行
+
+        行内标签:span
+        块标签：h1，h2.. , p div
+        -->
+
+
+<!--
+    下面提交一个表单到服务器请求数据,例子是调用图灵机器人的api
+
+    from:一个表单，里面包含输入框 按钮 提交等空间
+    action:要提交的url
+    method:提交方式，get和post
+    input 输入 按钮等的标签通过type指定输入样式 text 为文本样式，password 密码样式，button 按钮，submit 提交到action中的按钮
+    name:表单的key，输入的值为value,组成一组表单数据，{key:value} 作为参数提交
+
+-->
+<form action="http://www.tuling123.com/openapi/api" method="get">
+    <input type="text" name="key" value="key">
+    <input type="text" name="info" value="info">
+    <input type="userid" name="wechat-robot" value="userid">
+    <input type="password">
+    <input type="button" value=" 在input的value 里面设置提示的值">
+    <input type="submit" value=" type为sumbit时，提交数据">
+</form>
+
+<!--
+
+    选择框:
+        radio:单选框
+            1.type 为 radio,name相同表示属于同一组，单选
+            2.name为表单参数的key
+            3.value:为表单参数的value
+            4.checked=checked :默认选中
+        checkbox:多选框
+            1.type 为 checkbox ，多选
+    file 上传文件
+         1.依赖enctype="multipart/form-data"属性，必须在from头里面加上才能上传
+    reset:
+         1.typew为reset时，还原表单为默认初始状态
+    textarea:
+        1.用来输入多行文本
+        2.name:为表单数据的key参数
+        3.中间嵌的文本为默认文本
+     select:
+        下拉选择框
+        1.select:标签内为一组下拉标签，name为表单参数的key,size为下拉前显示的个数，multiple为可多选
+        2.option:下拉选项，selected为默认选中,value 为表单参数的value
+-->
+
+<form enctype="multipart/form-data" action="http://www.tuling123.com/openapi/api" method="get">
+    <p>请选择性别</p>
+    男：<input type="radio" name="gendar" value="1" checked="checked">
+    女：<input type="radio" name="gendar" value="2">
+    <p>请选择爱好</p>
+    篮球：<input type="checkbox" name="favor" value="1" checked="checked">
+    足球：<input type="checkbox" name="favor" value="2" checked="checked">
+    兵乓球：<input type="checkbox" name="favor" value="3">
+    <p>上传文件</p>
+    <input type="file" name="fname">
+    <input type="reset" value="重置">
+    <textarea name="text"> 这是默认文本</textarea>
+
+    <select name="city" size="3" multiple="multiple">
+        <option value="1">北京</option>
+        <option value="2" selected="selected">成都</option>
+        <option value="3">厦门</option>
+        <option value="4">广州</option>
+    </select>
+</form>
+<!--以上是所有 表单提交数据的类型-->
+
+<!--
+    a:a标签用来做跳转
+        1.做网络跳转, href ="https://www.baidu.com"
+        2.做本页跳转 (瞄点) heaf= # + 指定位置的id，例:href="#i1"
+-->
+<a href="https://www.baidu.com">点击跳转到百度</a>
+<a href="#i1">第一章</a>
+<a href="#i2">第二章</a>
+<a href="#i3">第三章</a>
+<div id="i1" style="height:600px;">
+    第一章内容
+</div>
+
+<div id="i2" style="height:600px; background=red">
+    第一章内容
+</div>
+
+<div id="i3" style="height:600px;">
+    第一章内容
+</div>
+
+
+<!--
+      img:img标签用来显示图片
+          1.做网络跳转, href ="https://www.baidu.com"
+          2.做本页跳转 (瞄点) heaf= # + 指定位置的id，例:href="#i1"
+  -->
+<a href="https://www.baidu.com">
+    <img src="image/icon_pycharm.png" title="img title" style="width:300px;height:400px" alt="alt属性">
+</a>
+
+
+<!--
+     列表:
+         1.做网络跳转, href ="https://www.baidu.com"
+         2.做本页跳转 (瞄点) heaf= # + 指定位置的id，例:href="#i1"
+ -->
+<ul>
+    <li>无序列表1</li>
+    <li>无序列表2</li>
+    <li>无序列表3</li>
+</ul>
+
+<ol>
+    <li>有序列表1</li>
+    <li>有序列表2</li>
+    <li>有序列表3</li>
+</ol>
+
+<dt>
+    <tt>ttt
+<dd>ddd</dd>
+<dd>ddd</dd>
+<dd>ddd</dd>
+<dd>ddd</dd>
+</tt>
+<tt>ttt
+    <dd>ddd</dd>
+    <dd>ddd</dd>
+    <dd>ddd</dd>
+    <dd>ddd</dd>
+</tt>
+<tt>ttt
+    <dd>ddd</dd>
+    <dd>ddd</dd>
+    <dd>ddd</dd>
+    <dd>ddd</dd>
+</tt>
+</dt>
+
+
+<!--
+     表格:
+         1.table:一个表格，里面可以嵌入 行tr和列td border为边框
+         2.tr:一个标签表示一行
+         3.td:一个标签表示一列
+         4.thead:表头信息
+         5.tr:表头里面的行
+         6.th:表头里面的列
+         7.tbody:表内容信息
+
+
+ -->
+<table border="1">
+    <thead>
+
+    <tr>
+        <th>表头1</th>
+        <th>表头2</th>
+        <th>表头3</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr>
+        <td><a href="https://baidu.com" colspan="2">第一行，第一列</a></td>
+        <td>第一行，第二列</td>
+        <td>第一行，第三列</td>
+    </tr>
+    <tr>
+        <td>第二行，第一列</td>
+        <td rowspan="2">第二行，第二列</td>
+        <td>第二行，第三列</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<!--
+        fieldset:
+            实现输入框被围起来效果
+        legentd：
+            输入框被围起来上面显示的文字
+        lable
+            用来绑定输入控件，点击文字时 获取绑定控件的焦点，for 为要绑定控件的id
+-->
+<fieldset>
+    <legend>登录</legend>
+    <label for="username">姓名</label>
+    <input id="username" type="text" name="user">
+    <label for="usersex">性别</label>
+    <input id="usersex" type="text" name="user">
+</fieldset>
+
+
+<!--
+    以下是css的学习
+
+-->
+
+
+</body>
+</html>
