@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- 这里图片用的是base64的做法，避免大家在使用我的demo的时候没有对应的图标 -->
+    <style>
+        .username {
+            width: 130px;
+            background: #FFFFFF url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANfSURBVDhPRZRNaFxlFIa7dSuICzcuXERRKkh37uxGUGNB3KSCUqUIkaItVtDQpqUMlSYWUxo1qaYGbTRg1VItjS6sNGjF1CZVM5m/O/fOvfN77/xl/jPz+H63URcfd7jzneec85733B12pYdd6WCV2uQ2IZarkql2sfwmjt4ni5vE8zWSpQZufYt0uUu80MDTXac6IB0MCCGOgtJ+B682wC63cWs9Kn3wFKR71CEEGFCxA5laX6BWCMpUuQMJK1HmfwHXV2O8dWKCN45EGN77MhMffUpJweZ/U4Xfg5TfDStxKtsQU7ZX6ep0iNp5JqdnmZo5x9iJCC+8sp8HHt7J+zNz+C3YyFZwq32soKfWTHtb/0OygTTx61z9YYmRvc9zbuY9Dh7Yx57hJxgaup+hhx7k99W/yOquLf1M+5mKIEHLQPohxC012ZIOiY01Rp7bzcjwLg68tJtDrz7NY4/cyz1338VP15fJVnthK56EMtUY3f6DOBItXygReFHcP5fI/nGB4to8zsp5jh58lkd33kfctYipJ6sB6750kR5Ouc8O05MdiBx0qNVbFJ11Ujcv00kvEf35DCtLpzk/fYiFL6bJ1sskNMkNTeVvA9FkksE2xPSXE8hxipRyLpcW57i1/C3rK5f55dqXnJka5+J3X1Fod1gvNFWF/NGEeM2ABAlVFiSZq4Xq/3Y7yuznC4ydjDDx4TRjp06y//BhjkxOcSPmEC22SFYGOkouXRIVCWsqSZY7xOsdVssNJr++ym35YP5WmncWf+TYxWvMLUc5+sk3jH+wQGHLeKQpJ9flqS6poHEHkpJHYuUmlqYzevpjTn1/g0vugM9iLWZvlnj3yiqPv/gmb5+9gCNRjTGz0iajpJYvSDidcg9Xfs6VYXktw/jZRfa8dpynRo/zzOsRnhw9RmT+Cr9aNby2xJR9XcWYcduyRggxL9xci3ypR0li5ZXN0QQS+h03fUurlIS09UwqUVz3XE3GK8v20jOEGNeapTLaWHJgWr06mxJOz4TeJZQkITE3tDTGG7bglt8nVVScv202o4lVU1BjgFXXqqtPs7Hmk2CsbT4TZoopk1mVmWOropwq1rC2faJvREK7Y46BesqkPVOWAZniQHsFvtrzFJgsaCLSL4TK/omgzT+uj/fDrpBPrwAAAABJRU5ErkJggg==") 2px 2px no-repeat;
+            padding-left: 18px;
+            BORDER: #E7AD01 1px solid;
+            FONT-SIZE: 13px;
+            COLOR: #000000;
+            HEIGHT: 20px
+        }
+        .password {
+            width: 130px;
+            background: #FFFFFF url("/image/logo.png") 2px 2px no-repeat;
+            background-image: url("/image/down-circle.png");
+            padding-left: 18px;
+            BORDER: #E7AD01 1px solid;
+            FONT-SIZE: 13px;
+            COLOR: #000000;
+            HEIGHT: 20px
+        }
+
+        input {
+            border: none;
+        }
+
+        .box {
+            height: 50px;
+            background: yellow;
+        }
+
+        .box input {
+            width: 200px;
+            height: 30px;
+            border-radius: 15px;
+            margin: 10px 0;
+            background: url(image/down-circle.png) no-repeat;
+            background-color: white;
+            background-position: 3px;
+            padding-left: 30px;
+            border: 1px solid black;
+            outline: none;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<input class="username" onMouseOver="this.style.borderColor='#99E300'" onMouseOut="this.style.borderColor='#A1BCA3'"
+       maxLength="12" name="UserName">
+<input class="password" onMouseOver="this.style.borderColor='#99E300'" onMouseOut="this.style.borderColor='#A1BCA3'"
+       maxLength="12" name="password">
+
+
+<div style="height:30px;width:300px;position: relative;">
+
+    <input type="text" style="height:30px;width:270px;padding-right: 30px">
+
+    <img style=" background: url(image/down-circle.png) no-repeat;display: inline-block; width: 16px;height: 16px;position: absolute; right: 0px;top: 10px"></img>
+</div>
+
+
+<div class="box">
+    <input type="text" class="username" value="搜索"/>
+</div>
+
+</body>
+</html>

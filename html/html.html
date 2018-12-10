@@ -15,12 +15,75 @@
     <link rel="shortcut icon" href="image/icon_pycharm.png"> <!--标题上的图标-->
 
 
+    <link rel="stylesheet" href="commons.css">   <!--引入commons样式表-->
     <style>
+        /*id 选择器 通过id绑定这个样式，一个选择器只能被绑定一次*/
+        #i11 {
+            background-color: aqua;
+            height: 100px;
+        }
+
+        /*class 选择器 通过class绑定这个样式*/
+        .c1 {
+            background-color: #2459a2;
+            height: 100px;
+        }
+
+        /*标签 选择器 所有这个标签绑定这个样式*/
+        div {
+            background-color: #ffff00;
+            height: 100px;
+        }
+
+        /*层级 选择器 所有这个层级下的标签绑定这个样式 ，表示 span 标签下的div都绑定这个样式 */
+        span div {
+            background-color: #2459a2;
+            height: 100px;
+        }
+
+        .c1 div {
+            background-color: #ffff00;
+            height: 100px;
+        }
+
+        /*组合 多个选择器都应用这一个样式 */
+        #c22, c33 {
+            background-color: #2459a2;
+            height: 100px;
+        }
+
+        /*属性 选择器 c1样式下的 type=text的标签都应用这一样式 */
+        .c1[type='text'] {
+            background-color: #ffff00;
+            height: 100px;
+        }
+
+        /*borer*/
+
+        .border {
+            height: 200px; /*高度*/
+            width: 300px; /*宽度:200px;*/
+            border: aqua 1px solid;
+            line-height: 200px;
+            size: 36px;
+            color: green;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .css {
+            height: 200px; /*高度*/
+            width: 300px; /*宽度:200px;*/
+            line-height: 200px; /*根据高度垂直居中，填写高度*/
+            color: red; /*字体颜色*/
+            font-size: 14px; /*字体大小*/
+            font-weight: 600; /*字体大小*/
+        }
 
 
     </style>
 </head>
-<body>
+<body style="margin: 0 auto">
 
 <!--&ngsp:空格  &lt:左箭头 &rt:右箭头 href 后面的为点击跳转链接-->
 <a href="www.baidu.com">hello &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; domain &lt;a&gt;</a>
@@ -127,15 +190,15 @@
 <a href="#i1">第一章</a>
 <a href="#i2">第二章</a>
 <a href="#i3">第三章</a>
-<div id="i1" style="height:600px;">
+<div id="i1" style="height:200px;">
     第一章内容
 </div>
 
-<div id="i2" style="height:600px; background=red">
+<div id="i2" style="height:200px;background-color: red">
     第一章内容
 </div>
 
-<div id="i3" style="height:600px;">
+<div id="i3" style="height:200px;">
     第一章内容
 </div>
 
@@ -245,7 +308,77 @@
 
 <!--
     以下是css的学习
+    下面的选择器都写在了head的style里面
+    样式优先级
+        1. 标签上style
+        2. head先定义的样式，谁先定义谁优先级高
+    css 样式:
+        1.边框
+            border :1px solid red;
+        2.
+            height:400px;           宽度，
+            width:300px;            高度，
+            line-height:400px;      根据高度垂直居中，填写高度
+            color:red;              字体颜色
+            font-size:14;          字体大小
+            font-weight:600;        字体大小
+        3.浮动
 -->
+
+<div id="i11">id选择器</div>
+<div class="c1">class选择器</div>
+<div>标签选择器</div>
+<span>
+    <div>层级选择器</div>
+</span>
+
+<div class="c33">
+    组合选择器
+</div>
+
+<div class="c1">
+    属性选择器<input type="text">
+</div>
+
+<div class="border">boder</div>
+<div class="css">css</div>
+
+<!--浮动 float-->
+<div class="border" style="float: left">float left</div><!--左浮动-->
+<div class="border" style="float: right">float right</div><!--右浮动-->
+<div style="clear: both;"></div> <!--清除浮动 使显示正常-->
+
+<!--
+    显示方式 display
+        行内标签:无法设置高度，宽度，边距
+        块级标签:独占一行，无法和其他控件同行
+        display:none; 不显示
+        display:inline; 以行内标签显示
+        display:block;  以块状标签显示
+        display:inline-block; 以 行内标签显示 +  块状标签显示 ；可同行和设置高度,宽度,边距
+
+-->
+
+<div style="background-color: #2459a2; display: inline;">行内标签1</div>
+<div style="background-color: #2459a2; display: inline;">行内标签2</div>
+
+<div style="background-color: yellow; width: 100px; height: 30px;display: block;">块级标签1</div>
+<div style="background-color: #2459a2; width: 100px; height: 30px; display: block;">块级标签2</div>
+
+<div style="background-color: yellow;   height: 30px;display:inline-block;">行内块级标签1</div>
+<div style="background-color: #2459a2;  height: 30px;display: inline-block;">行内块级标签12</div>
+
+<div style="background-color: #2459a2;  height: 50px;display: none;">不显示标签1</div>
+<div style="background-color: #2459a2;  height: 50px;">显示标签1</div>
+
+
+<!--边距 margin 和 padding-->
+
+<div style="height: 100px; background-color: yellow">
+
+    <div style="background-color: #2459a2;margin-top: 20px" ></div>
+
+</div>
 
 
 </body>
