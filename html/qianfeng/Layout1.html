@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个div的基础布局</title>
+</head>
+
+<style type="text/css">
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    #box {
+        width: 800px;
+        margin: 0 auto;
+
+    }
+
+    #logo {
+        height: 200px;
+        background-color: yellow;
+    }
+
+    #nav {
+        height: 50px;
+        background-color: red;
+    }
+
+    #advertisement {
+        height: 80px;
+        background-color: #CCCCCC;
+    }
+
+    #main {
+        height: 600px;
+        background-color: #2459a2;
+        width: 100%;
+        /*border: solid black 1px;*/
+        /*position: absolute;*/
+    }
+
+    #mainLeft {
+        background-color: #E7AD01;
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    #mainRight {
+        background-color: #E6E6FA;
+        float: right;
+        width: 50%;
+        height: 100%;
+        /*position: relative;*/
+    }
+
+    #footer {
+        background-color: #2459a2;
+        height: 100px;
+    }
+
+    .leftFixed {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+    }
+
+    #four {
+        width: 100%;
+        height: 800px;
+        background-color: #E7AD01;
+    }
+
+    .one_of_four {
+        width: 50%;
+        height: 50%;
+        background-color: #F5F5DC;
+    }
+
+    .two_of_four {
+        width: 50%;
+        height: 50%;
+        background-color: #E7AD01;
+    }
+
+    .three_of_four {
+        width: 50%;
+        height: 50%;
+        background-color: #CCCCCC;
+    }
+
+    .four_of_four {
+        width: 50%;
+        height: 50%;
+        background-color: #F5F5DC;
+    }
+
+</style>
+
+<body>
+
+
+<!--box为最外层布局-->
+<div id="box">
+
+    <!--logo为顶部logo部分-->
+    <div id="logo">
+
+    </div>
+
+    <!--nav 导航部分-->
+    <div id="nav">
+
+    </div>
+
+    <!--advertisement广告部分-->
+    <div id="advertisement">
+
+    </div>
+
+    <!--main 主体部分-->
+    <div id="main">
+
+        <div id="mainLeft"></div>
+        <div id="mainRight"></div>
+    </div>
+
+    <div id="footer"></div>
+
+    <div id="four">
+
+        <div class="one_of_four"></div>
+        <div class="two_of_four"></div>
+        <div class="three_of_four"></div>
+        <div class="four_of_four"></div>
+    </div>
+
+</div>
+
+
+<!--用position = fixed 固定位置-->
+<div class="left">
+    <img src="img/logo.png">
+</div>
+
+
+</body>
+</html>
