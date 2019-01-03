@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        /*max-width:如果窗口小于这个值，则width 跟随窗口大小*/
+        #main {
+            max-width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: red;
+        }
+
+        /*盒子模型：相同宽度的两个div，由于.fancy 设置了边框和内边距，会导致.fancy的div变得更大，要添加属性：
+         -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+          来解决这个问题
+        */
+        .simple {
+            width: 500px;
+            margin: 20px auto;
+            background-color: red;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .fancy {
+            width: 500px;
+            margin: 20px auto;
+            padding: 50px;
+            background-color: blue;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /*position 属性*/
+
+        /*position 设置为static ，表示这个元素不会被 position 来定位 */
+        .static {
+            position: static;
+        }
+
+        /*position 设置为relative，表示这个元素采用相对于正常位置的相对布局的位置，通过top 、 right 、 bottom 和 left 属性 来设置位置*/
+        .relative {
+            position: relative;
+            top: -20px; /*相对正常位置的上边移动-20个像素*/
+            left: -20px; /*相对正常位置的左边移动-20个像素*/
+            background-color: blue;
+            width: 500px;
+        }
+
+        /*position 设置为fixed，表示这个元素采用 相对于窗口的固定布局，距离窗口上面200px，左边0像素*/
+        .fixed {
+            position: fixed;
+            left: 0;
+            top: 200px;
+            width: 200px;
+            height: 300px;
+            background-color: yellow;
+        }
+
+        .relative1 {
+            background-color: #E7AD01;
+            width: 800px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative
+        }
+
+        /*position 设置为绝对布局， 表示这个元素相对于父布局是固定的，距离父布局上面120px，父布局右边0px,注意：他的父布局要设置position为 不是static，如relative，这个元素才会相对父布局定位，否则相对于body来定位*/
+        .absolute {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            width: 300px;
+            height: 200px;
+            background-color: #CCCCCC;
+        }
+
+        /*float  浮动*/
+
+        /*设置float 属性来设置浮动，设置左浮动:float:left,设置右浮动:float:right*/
+        .left-float-box {
+            float: left;
+            width: 200px;
+            height: 100px;
+            margin: 1em;
+            background-color: red;
+        }
+
+        /*设置clear来清除浮动，
+          前面使用过浮动后，必须清除浮动，否则浮动状态持续存在
+         清除左浮动：clear:left,清除右浮动:clear:right,清除左右浮动:clear:both*/
+        .no-float-box {
+            clear: left;
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        /*media screen 属性来  自适应屏幕宽度，暂没有起作用，位置原因*/
+        @media screen and (min-height: 800px) and (max-height: 900px) {
+            .page {
+                background-color: #E7AD01;
+                margin: 0 auto;
+                width: 600px;
+                height: 300px;
+            }
+        }
+
+        .vertical-container {
+            height: 300px;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            background-color: rebeccapurple;
+        }
+
+        .center {
+            height: 300px;
+            line-height: 300px;
+            background-color: #CCCCCC;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="main"></div>
+<div class="simple">没有添加边框的正常总宽度</div>
+<div class="fancy">添加了边框导致 总宽变大</div>
+<div class="static">
+    static 是默认值。任意 position: static; 的元素不会被特殊的定位。一个 static 元素表示它不会被“positioned”，一个 position
+    属性被设置为其他值的元素表示它会被“positioned”。
+</div>
+<div class="relative">在一个相对定位（position属性的值为relative）的元素上设置 top 、 right 、 bottom 和 left
+    属性会使其偏离其正常位置。其他的元素的位置则不会受该元素的影响发生位置改变来弥补它偏离后剩下的空隙。
+</div>
+
+<div class="fixed">相对于窗口的布局，距离窗口上面200px，左边0像素</div>
+<div class="relative1">
+    <div class="absolute">这是相对于父布局的 绝对布局,他的父布局要设置position为relative</div>
+</div>
+<div class="left-float-box"></div>
+<div class="no-float-box"></div>
+
+<div class="page"></div>
+
+<div class="vertical-container">
+    <!--<div>-->
+    CSS里总算是有了一种简单的垂直居中布局的方法了！
+    dsafdsafdsa<br>
+    <div style="width: 100px;height: 100px;background-color: #F5F5DC"></div>
+    dsafdsa
+    <!--</div>-->
+</div>
+
+<div class="center">
+    <!--<a style="display: block;text-align: center;background-color: red">line-height 居中</br>dosafsda</a>-->
+
+    <div style="line-height: 300px">
+
+        dsafdsa
+
+        <br>
+        dsafdsaf
+    </div>
+</div>
+</body>
+</html>
