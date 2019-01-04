@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta标签设置-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- app标题 -->
+    <title>超市</title>
+    
+    <!-- 使用iOS CSS主题样式-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <!-- iOS related颜色样式 -->
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- 自定义样式-->
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/bass.css">
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- 左侧面板，显示隐藏时带有效果（reveal effect）-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>这里放置左测面板内容。</p>
+      </div>
+    </div>
+    <!-- 所有的Views视图 -->
+    <div class="views">
+      <!-- 主视图（需要有"view-main"样式） -->
+      <div class="view view-main">
+        <!-- 顶部导航栏 -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <!--
+                导航栏右侧只有一个图标（"icon-only"样式）
+                “open-panel”样式表示点击时打开左侧面板
+              -->
+              <a href="#" class="link icon-only open-panel"><i class="icon iconfont icon-geren ca-color9 size-20"></i></a>
+            </div>
+            <!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+            <div class="center sliding">
+              <a href="search.html">
+                <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init" style="background:none;">
+                <div class="searchbar-input">
+                  <input type="search" placeholder="请输入用户名或手机号" class="Search-input" disabled="" style="border:solid 1px #f1f1f1">
+                </div>
+              </form>
+              </a>
+            </div>
+            <div class="right">
+              <!--导航栏右侧只有一个图标（"icon-only"样式）“open-panel”样式表示点击时打开左侧面板-->
+              <a href="#" class="link icon-only add-store"><i class="icon iconfont icon-saomiao size-20"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+              所以这里添加额外样式（navbar-through和toolbar-through）-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- 首页, "data-page" 里设置页面名字 -->
+          <div data-page="index" class="page navbar-fixed toolbar-fixed">
+            
+            <div class="page-content infinite-scroll" data-distance="100">
+              <!-- 幻灯片 -->
+              <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="picture/01.png" class="swiper-lazy">
+                          <!-- <div class="preloader"></div> -->
+                        </div>
+                        
+                        <div class="swiper-slide">
+                          <img src="picture/02.png" class="swiper-lazy">
+                          <!-- <div class="preloader"></div> -->
+                        </div>
+                      </div>
+                      <div class="swiper-pagination color-white"></div>
+                    </div>
+                  <!-- 幻灯片 end-->
+
+                  <!-- 个人信息操作-->
+              <div class="panel-menu-info panel-menu panel-menu-home content-block">
+                <div class="row row-nw">
+                    <div class="item col-25">
+                        <a href="My-card.html">
+                            <i class="ico ico-payment"></i>
+                            <div class="item-title ca-color1">我的糖卡</div>
+                        </a>
+                    </div>
+                    <div class="item col-25">
+                        <a href="consumption-query.html">
+                            <i class="ico ico-consume"></i>
+                            <div class="item-title ca-color2">消费查询</div>
+                        </a>
+                    </div>
+                    
+                    <div class="item col-25">
+                        <a href="giftbag.html">
+                            <i class="ico ico-gift2"></i>
+                            <div class="item-title ca-color4">我的礼包</div>
+                        </a>
+                    </div>
+                    <div class="item col-25">
+                        <a href="mywallet.html">
+                            <i class="ico ico-score"></i>
+                            <div class="item-title ca-color5">我的积分</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row row-nw">
+                    <div class="item col-25">
+                        <a href="mycoupons.html">
+                            <i class="ico ico-coupon"></i>
+                            <div class="item-title ca-color6">优惠券</div>
+                        </a>
+                    </div>
+                    <div class="item col-25">
+                        <a href="thelabel.html">
+                            <i class="ico ico-tag"></i>
+                            <div class="item-title ca-color7">我的标签</div>
+                        </a>
+                    </div>
+                    <div class="item col-25">
+                        <a href="coupons.html">
+                            <i class="ico ico-lingquan"></i>
+                            <div class="item-title ca-color3">领券</div>
+                        </a>
+                    </div>
+                     <div class="item col-25">
+                        <a href="http://vip.t3c.com.cn/weixin/memberbenefits.html" class="external">
+                            <i class="ico ico-hyqy123"></i>
+                            <div class="item-title ca-color8">会员权益</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row row-nw row-nw-2">
+                  <div class="item col-25 col-25-2">
+                        <a href="http://www.fyjkkj.com/st/search_index.html" class="external">
+                            <i class="ico ico-zd"></i>
+                            <div class="item-title ca-color5">用药指导</div>
+                        </a>
+                    </div>
+                    <div class="item col-25 col-25-2">
+                        <a href="http://wwwtest.fyjkkj.com/st/xuanzheng/index.html " class="external">
+                            <i class="ico ico-xy"></i>
+                            <div class="item-title ca-color9">按症选药</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+          <!-- 个人信息操作   end-->
+
+          <!-- 商品展示   -->
+            <div class="content-block home-cb">
+              <h2 class="size-076"><i class="icon iconfont icon-jiangbei size-20 ba-color9 marginR10"></i>热门商品</h2>
+              <div class="row">
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro1.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro2.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro3.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro4.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro1.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro2.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro3.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro4.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro1.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro2.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+                <div class="col-50 home-pro">
+                  <a>
+                    <img src="picture/pro3.jpg">
+                    <label>花语传说 蜗牛修护精华液</label>
+                  </a>
+                </div>
+              </div>
+            </div>
+          <!-- 商品展示   end-->
+            </div>
+          </div>
+        </div>
+        <!-- 底部工具栏 -->
+        <div class="toolbar tabbar tabbar-labels">
+            <div class="toolbar-inner"><!-- tabnav1 -->
+                <a href="#" class="tab-link active external create-links">
+                    <i class="icon iconfont icon-shouye size-22"></i>
+                    <span class="tabbar-label">会员信息</span>
+                </a>
+
+                <a href="classify.html" class="tab-link external">
+                    <i class="icon iconfont icon-fenlei-active size-25"></i>
+                    <span class="tabbar-label">分类</span>
+                </a>
+                <a href="members-open.html" class="tab-link external">
+                    <i class="icon iconfont icon-a1 size-35"></i>
+                    <span class="tabbar-label">会员开户</span>
+                </a>
+                <a href="tel.html" class="tab-link external">
+                    <i class="icon iconfont icon-dadianhua size-35">
+                      <span class="badge bg-red">5</span>
+                    </i>
+                    <span class="tabbar-label">打电话</span>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Framework7框架的js-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- 你的应用的js -->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
